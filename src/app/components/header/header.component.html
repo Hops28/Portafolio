@@ -1,1 +1,8 @@
-<p>header works!</p>
+<div id="header_body" onload="calcular()">
+  <div class="container">
+    <div class="bubbles">
+      <!-- For para las burbujas -->
+      <span *ngFor="let valor of retraso" style="--i:{{valor}}"></span>
+    </div>
+  </div>
+</div>
