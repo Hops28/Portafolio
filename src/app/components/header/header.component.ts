@@ -81,3 +81,9 @@ export class HeaderComponent implements OnInit
 // window.addEventListener("resize", () => {
 //   var width = window.innerWidth;
 // });
+
+window.addEventListener("scroll", () => {
+  var navbar = document.querySelector("header");
+
+    navbar?.classList.toggle("sticky", window.scrollY > 570);
+})

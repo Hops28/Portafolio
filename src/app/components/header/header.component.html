@@ -2,7 +2,29 @@
   <div class="container">
     <div class="bubbles">
       <!-- For para las burbujas -->
-      <span *ngFor="let valor of retraso" style="--i:{{valor}}"></span>
+      <span *ngFor="let valor of retraso" style="--i:{{ valor }}"></span>
     </div>
+
+    <div id="navbar">
+      <header>
+        <a href="" class="logo">Logo</a>
+
+        <ul>
+          <li><a href="">Sobre mí</a></li>
+          <li><a href="">Proyectos</a></li>
+          <li><a href="">Contacto</a></li>
+        </ul>
+      </header>
+    </div>
+
+    <div class="botones_inicio">
+      <a href="" style="--color:#4FC3DC">
+        <span>Ver mi trabajo</span>
+        <i></i>
+      </a>
+    </div>
+  </div>
+  <div class="contenido">
+    <div id="degradado"></div>
   </div>
 </div>

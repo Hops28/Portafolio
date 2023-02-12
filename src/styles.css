@@ -9,3 +9,16 @@ body {
   min-height: 100vh;
   background: #0C192C;
 }
+
+body::-webkit-scrollbar {
+  /* background-color: #9500e220; */
+  background-color: #3000F220;
+  z-index: -10;
+}
+
+body::-webkit-scrollbar-thumb {
+  /* background-color: #9500e230; */
+  background: linear-gradient(#9500e260, #9500e230);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
