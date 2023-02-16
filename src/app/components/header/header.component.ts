@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {  HostListener } from "@angular/core";
 
-
 declare var window: Window;
+
+interface objeto {
+  duracion: number,
+  retraso: number
+}
 
 @Component({
   selector: 'app-header',
@@ -13,7 +17,7 @@ declare var window: Window;
 export class HeaderComponent implements OnInit
 {
   // arreglo donde se guardará en valores numéricos para el retraso de la animación de las esferas
-  retraso: number[] = [];
+  retraso :objeto[] = [];
 
   datos = {
     burbujas : 25,
@@ -46,7 +50,12 @@ export class HeaderComponent implements OnInit
     {
       for(let i = 0; i < burbujas; i++)
       {
-        this.retraso.push(Math.floor(Math.random() * 40) + 10);
+        let obj = {
+          duracion : Math.floor(Math.random() * 40) + 10,
+          retraso : Math.floor(Math.random() * 3) + 1
+        };
+
+        this.retraso.push(obj);
       }
     }
     else if (tipo == 2) // Si es de tipo 2 entonces es de modificación
@@ -58,7 +67,12 @@ export class HeaderComponent implements OnInit
         for(let i = 0; i < burbujas_faltantes; i++)
         {
           // Se agrega un valor aleatorio, ese valor significa la duración de la animación
-          this.retraso.push(Math.floor(Math.random() * 40) + 10);
+          let obj = {
+            duracion : Math.floor(Math.random() * 40) + 10,
+            retraso : Math.floor(Math.random() * 3) + 1
+          };
+
+          this.retraso.push(obj);
         }
       }
       else if (burbujas < this.retraso.length) // Y si es menor, entonces se eliminan algunas
@@ -85,5 +99,5 @@ export class HeaderComponent implements OnInit
 window.addEventListener("scroll", () => {
   var navbar = document.querySelector("header");
 
-    navbar?.classList.toggle("sticky", window.scrollY > 570);
+    navbar?.classList.toggle("sticky", window.scrollY > 400);
 })
