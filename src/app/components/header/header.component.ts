@@ -52,7 +52,7 @@ export class HeaderComponent implements OnInit
       {
         let obj = {
           duracion : Math.floor(Math.random() * 40) + 10,
-          retraso : Math.floor(Math.random() * 3) + 1
+          retraso : Math.floor(Math.random() * 5) + 1
         };
 
         this.retraso.push(obj);
@@ -69,7 +69,7 @@ export class HeaderComponent implements OnInit
           // Se agrega un valor aleatorio, ese valor significa la duración de la animación
           let obj = {
             duracion : Math.floor(Math.random() * 40) + 10,
-            retraso : Math.floor(Math.random() * 3) + 1
+            retraso : Math.floor(Math.random() * 5) + 1
           };
 
           this.retraso.push(obj);
