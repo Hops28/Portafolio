@@ -27,9 +27,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css",
+              "https://unpkg.com/boxicons@latest/css/boxicons.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/particles/particles.js",
+              "src/assets/particles/app.js",
+              "node_modules/particles.js/particles.js"
+            ]
           },
           "configurations": {
             "production": {

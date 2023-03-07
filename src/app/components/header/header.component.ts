@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {  HostListener } from "@angular/core";
 
+// declare var particlesJS: any; // declara la variable global de Particles.js
+
+// import '../../../assets/particles/app.js'
+// import '../../../assets/particles/particles.js'
+
 declare var window: Window;
 
 interface objeto {
@@ -28,10 +33,16 @@ export class HeaderComponent implements OnInit
   constructor() {
 
     // En el constructor solo asignamos el retraso de las burbujas que aparecen (valores entre 10 y 30)
-    this.edit_burbujas(this.datos.burbujas, 1)
+    this.datos.ancho = window.innerWidth;
+    this.datos.burbujas = Math.floor(this.datos.ancho / 50);
+
+    this.edit_burbujas(this.datos.burbujas, 1);
   }
 
   ngOnInit(): void {
+    // particlesJS.load('mi-canvas', 'assets/particles/particlesjs-config.json', function() {
+    //   console.log('Carga completada.');
+    // });
   }
 
   /*************** FUNCIONES PROPIAS ***********************/
@@ -85,11 +96,22 @@ export class HeaderComponent implements OnInit
           this.retraso.pop();
         }
 
-        console.log(this.retraso);
+        // console.log(this.retraso);
       }
     }
   }
 
+  menuCambio()
+  {
+    var icono = document.querySelector("#menu-icon");
+    var nav = document.querySelector("#menu");
+
+    console.log(icono)
+    console.log(nav)
+
+    icono?.classList.toggle("bx-x");
+    nav?.classList.toggle("open");
+  }
 }
 
 // window.addEventListener("resize", () => {
@@ -99,5 +121,9 @@ export class HeaderComponent implements OnInit
 window.addEventListener("scroll", () => {
   var navbar = document.querySelector("header");
 
-    navbar?.classList.toggle("sticky", window.scrollY > 400);
+  navbar?.classList.toggle("sticky", window.scrollY > 400);
 })
+
+/************* H A M B U R G U E S A ****************/
+
+

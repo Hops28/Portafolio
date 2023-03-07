@@ -7,6 +7,19 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/*****************************************************/
+
+/* canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  z-index: 10;
+} */
+
+/*****************************************************/
+
 #header_body {
   min-height: 100vh;
   background: #0C192C;
@@ -109,7 +122,16 @@ header ul li a {
   color: #fff;
   letter-spacing: 2px;
   font-weight: 500px;
-  transition: 0.6s;
+  transition: 0.5s;
+}
+
+header ul li a:hover {
+  color: #4FC3DC;
+  text-shadow: #4FC3DC;
+}
+
+.sticky ul li a:hover {
+  color: #ffbbff;
 }
 
 .sticky {
@@ -220,6 +242,8 @@ header ul li a {
   align-items: center;
   /* border-radius: 25px; */
   margin-bottom: 20vh;
+  padding-bottom: 25vh;
+  background-color: rgba(0, 0, 0, .3);
 }
 /*
 .contenido #degradado {
@@ -232,10 +256,12 @@ header ul li a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 20vh;
+  background-color: rgba(0, 0, 0, .3);
 }
 
 #titulo1 span {
-  margin-top: 20vh;
+  margin-top: 18vh;
   font-weight: 500;
   font-size: 2em;
   color: #EFEFFF;
@@ -255,6 +281,7 @@ header ul li a {
   background: rgba(0, 0, 0, .5);
   border-radius: 50%;
   overflow: hidden;
+  transition: ease-in-out 1s;
 }
 
 .box::before {
@@ -355,4 +382,191 @@ header ul li a {
   color: #EFEFFF;
   font-weight: 400;
   font-size: 1.1em;
+}
+
+/********************** R E S P O N S I V E ***********************/
+
+@media (max-width : 800px) {
+  .contenido {
+    flex-direction: column;
+  }
+  .descripcion {
+    width: 80vw;
+  }
+
+  header {
+    padding: 40px 60px;
+  }
+
+  .sticky {
+    /* position: fixed; */
+    padding: 5px 60px;
+  }
+
+  header ul li a {
+    margin: 0 13px;
+  }
+}
+
+@media (max-width : 700px) {
+  header {
+    padding: 40px 50px;
+  }
+
+  .sticky {
+    /* position: fixed; */
+    padding: 5px 50px;
+  }
+
+  header ul li a {
+    margin: 0 10px;
+    letter-spacing: 1px;
+  }
+
+  .container .botones_inicio a {
+    font-size: 1em;
+  }
+}
+
+@media (max-width : 650px) {
+  header {
+    padding: 40px 35px;
+  }
+
+  .sticky {
+    /* position: fixed; */
+    padding: 5px 35px;
+  }
+
+  header ul li a {
+    margin: 0 8px;
+  }
+}
+
+/**************** H A M B U R G U E S A *****************/
+
+#menu-icon {
+  font-size: 2.5em;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  transition: .5s;
+}
+
+@media (max-width : 550px) {
+  #menu-icon {
+    display: block;
+  }
+
+  header ul {
+    position: absolute;
+    flex-direction: column;
+    top: 70%;
+    right: -100%;
+    background-color: #9500e280;
+    width: 135px;
+    border-radius: 20px 1px 20px 20px;
+    padding: 20px 0;
+    transition: all ease .3s;
+  }
+
+  header ul li {
+   margin: 7px 0;
+  }
+
+  header ul li a:hover {
+    color: #ffbbff;
+  }
+
+  header .open {
+    right: 40px;
+  }
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  .sticky ul {
+    position: absolute;
+    flex-direction: column;
+    top: 110%;
+    right: -100%;
+    background-color: #9500e280;
+    width: 135px;
+    border-radius: 20px 1px 20px 20px;
+    padding: 20px 0;
+    transition: all ease .3s;
+  }
+
+  .sticky ul li {
+    margin: 7px 0;
+  }
+
+  .sticky .open {
+    right: 40px;
+  }
+}
+
+/****************************************************/
+
+@media (max-width : 400px) {
+  .box {
+    width: 250px;
+    height: 250px;
+  }
+
+  .box::before {
+    inset: -10px 80px;
+  }
+
+  .box::after {
+    inset: 7px;
+  }
+
+  .box .box_content h3 {
+    font-size: 1.3em;
+  }
+
+  .box .box_content h3 span {
+    font-size: 0.6em;
+  }
+
+  .box .box_content a {
+    font-size: 0.6em;
+    font-weight: 600;
+    bottom: 10px;
+  }
+}
+
+@media (max-width : 300px) {
+  .box {
+    width: 200px;
+    height: 200px;
+  }
+
+  .box::before {
+    inset: -10px 60px;
+  }
+
+  .box::after {
+    inset: 8px;
+  }
+
+  .box .box_content h3 {
+    font-size: 0.9em;
+    /* top: 10px; */
+  }
+
+  .box .box_content h3 br:nth-child(1) {
+    display: none;
+  }
+
+  .box .box_content h3 span {
+    font-size: 0.6em;
+  }
+
+  .box .box_content a {
+    font-size: 0.6em;
+    padding: 5px 10px;
+    font-weight: 600;
+    bottom: 20px;
+  }
 }
