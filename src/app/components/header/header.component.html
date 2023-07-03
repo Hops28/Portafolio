@@ -1,0 +1,79 @@
+<div id="header_body" onload="calcular()">
+  <div class="container">
+    <div class="bubbles">
+      <!-- For para las burbujas -->
+      <span *ngFor="let valor of retraso" [ngStyle]="{ '--d': valor.duracion, '--r': valor.retraso }">
+      </span>
+        <!-- {{valor.duracion}}
+        {{valor.retraso}} -->
+    </div>
+
+    <div id="navbar">
+      <header>
+        <a href="#header_body" class="logo">Logo</a>
+
+        <ul id="menu">
+          <li><a href="#titulo1">Sobre mí</a></li>
+          <li><a href="">Proyectos</a></li>
+          <li><a href="">Contacto</a></li>
+        </ul>
+
+        <i class='bx bx-menu' id="menu-icon" (click)="menuCambio()"></i>
+      </header>
+    </div>
+
+    <div class="botones_inicio">
+      <a href="#titulo1" style="--color:#4FC3DC"> <!--4FC3DC B955FF-->
+        <span>Ver mi trabajo</span>
+        <i></i>
+      </a>
+    </div>
+  </div>
+
+  <div id="titulo1">
+    <span>Sobre mí</span>
+    <div class="linea"></div>
+  </div>
+
+  <div class="contenido">
+    <!-- <div id="degradado"></div> -->
+
+    <div class="box">
+      <div class="box_content">
+        <img src="../../../assets/foto001.jpg" alt="Fotografía de propietario">
+
+        <!-- Texto -->
+
+        <br>
+
+        <h3>Estudiante
+          <br><br>
+          <span>
+            Diseñador UI/UX
+            <br>
+            Programador
+          </span>
+        </h3>
+
+        <br>
+
+        <a href="#">Contacto</a>
+      </div>
+    </div>
+    <div class="descripcion">
+      Soy un estudiante de ingeniería en computación con un fuerte enfoque en el <b>desarrollo web</b>. Soy un
+      <b>programador</b> hábil en lenguajes como <i>Javascript, Python, Java y C</i>, y tengo conocimientos sólidos en
+      diseño <i>UI/UX</i>. Actualmente estoy buscando una oportunidad como <b>desarrollador web</b> en la que pueda
+      poner en práctica mis habilidades técnicas y de diseño. Si bien soy originario de Managua, Nicaragua, estoy
+      abierto a oportunidades en cualquier parte del mundo. ¡No dude en ponerse en contacto conmigo si cree que podemos
+      trabajar juntos!
+    </div>
+  </div>
+</div>
+
+<!-- <div id="particles-js" style="height: 50vh;"></div> -->
+
+<!-- <canvas id="mi-canvas"></canvas> -->
+
+<!-- <script src="app.js"></script>
+<script src="particles.js"></script> -->
