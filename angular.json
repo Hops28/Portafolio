@@ -26,9 +26,11 @@
             ],
             "styles": [
               "src/styles.css",
-              "https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+              "node_modules/boxicons/css/boxicons.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {
