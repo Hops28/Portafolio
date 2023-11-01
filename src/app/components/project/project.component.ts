@@ -34,7 +34,7 @@ export class ProjectComponent {
       Nombre: "Proyecto3",
       Imagen: "../../../assets/Portada4.jpg",
       Descripcion: "Descripción del proyecto 3",
-      Categoria: "Flask",
+      Categoria: "Angular",
       Clase: "animate__animated animate__zoomIn"
     },
     {
@@ -47,7 +47,7 @@ export class ProjectComponent {
     // Agrega más proyectos aquí
   ];
 
-  categorias: string[] = ['Todos', 'Django', 'Flask'];
+  categorias: string[] = ['Todos', 'Django', 'Flask', 'Angular'];
   filtroCategoria: string = 'Todos';
   proyectosFiltrados: Proyecto[] = [];
 
@@ -55,35 +55,71 @@ export class ProjectComponent {
     this.aplicarFiltro();
   }
 
-  aplicarFiltro(): void {
-    if (this.filtroCategoria === 'Todos') {
-      for (let i = 0; i < this.proyectosFiltrados.length; i++)
-      {
-        this.proyectosFiltrados[i].Clase = "animate__animated animate__zoomOut animate__faster";
-      }
+  // ngAfterViewInit(){
+  //   const element: HTMLElement | null = document.querySelector('.box-img');
 
+  //   if (element) {
+  //     element.style.setProperty('--animate-duration', '0.5s');
+  //   }
+  // }
+
+  aplicarFiltro(): void {
+    // Se ocultan las cajas
+    this.ocultarCajas();
+
+    // Se evalúa el filtro que se quiere hacer
+    if (this.filtroCategoria === 'Todos') {
+
+      // Después de 0.3s se aplican los filtros, en este caso se muestran todos
       setTimeout(() => {
+        // Se asignan todos los proyectos que se quieren mostrar
         this.proyectosFiltrados = this.Proyectos;
 
-        for (let i = 0; i < this.proyectosFiltrados.length; i++)
-        {
-          this.proyectosFiltrados[i].Clase = "animate__animated animate__bounceIn animate__faster";
-        }
-      }, 500);
-    } else {
-      for (let i = 0; i < this.proyectosFiltrados.length; i++)
-      {
-        this.proyectosFiltrados[i].Clase = "animate__animated animate__zoomOut animate__faster";
-      }
-
+        // Se muestran todas las cajas
+        this.mostrarCajas();
+      }, 300);
+    }
+    else // En caso de que no son todos, entonces es con un filtro específico
+    {
+      // Después de 0.3s se aplican los filtros, en este caso es uno de los diferentes que hay
       setTimeout(() => {
+        // Se asignan los proyectos que van a ser filtrados y mostrados
         this.proyectosFiltrados = this.Proyectos.filter(proyecto => proyecto.Categoria === this.filtroCategoria);
 
-        for (let i = 0; i < this.proyectosFiltrados.length; i++)
-        {
-          this.proyectosFiltrados[i].Clase = "animate__animated animate__bounceIn animate__faster";
-        }
-      }, 500);
+        // Se muestran las cajas filtradas
+        this.mostrarCajas();
+      }, 300);
+    }
+  }
+
+  /*****************************************************/
+
+  ocultarCajas() : void {
+    for (let i = 0; i < this.proyectosFiltrados.length; i++)
+    {
+      this.proyectosFiltrados[i].Clase = "animate__animated animate__flipOutX";
+    }
+  }
+
+  mostrarCajas() : void {
+    for (let i = 0; i < this.proyectosFiltrados.length; i++)
+    {
+      this.proyectosFiltrados[i].Clase = "animate__animated animate__flipInX";
+    }
+  }
+
+  /******************************************************/
+
+  hoverCaja(tipo : number, nombreProyecto : string): void {
+    let indice = this.proyectosFiltrados.findIndex(proyecto => proyecto.Nombre === nombreProyecto);
+
+    if (tipo == 1)
+    {
+      this.proyectosFiltrados[indice].Clase = "animate__animated animate__pulse"
+
+      setTimeout(() => {
+        this.proyectosFiltrados[indice].Clase = ""
+      }, 300)
     }
   }
 }

@@ -26,3 +26,13 @@ body::-webkit-scrollbar-thumb {
 html {
   scroll-behavior: smooth;
 }
+
+#particles-js {
+  background-color: transparent;
+  width: auto;
+  height: 100vh;
+  margin-top: 120vh;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}

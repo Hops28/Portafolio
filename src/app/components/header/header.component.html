@@ -1,3 +1,5 @@
+
+
 <div id="header_body" onload="calcular()">
   <div class="container">
     <div class="bubbles">
@@ -10,6 +12,8 @@
 
     <div id="navbar">
       <header>
+        <div id="fondito"></div>
+
         <a href="#header_body" class="logo">Logo</a>
 
         <ul id="menu">
@@ -28,52 +32,68 @@
         <i></i>
       </a>
     </div>
-  </div>
+  </div> <!-- Fin div .container -->
 
-  <div id="titulo1">
-    <span>Sobre mí</span>
-    <div class="linea"></div>
-  </div>
+  <div id="noHeader">
+    <div id="sobreMi">
+      <div class="separador"></div>
 
-  <div class="contenido">
-    <!-- <div id="degradado"></div> -->
+      <div id="titulo1">
+        <span>Sobre mí</span>
+        <div class="linea"></div>
+      </div>
 
-    <div class="box">
-      <div class="box_content">
-        <img src="../../../assets/foto001.jpg" alt="Fotografía de propietario">
+      <div class="contenido">
+        <!-- <div id="degradado"></div> -->
 
-        <!-- Texto -->
 
-        <br>
+        <div class="box">
+          <div class="box_content">
+            <img src="../../../assets/foto001.jpg" alt="Fotografía de propietario">
 
-        <h3>Estudiante
-          <br><br>
-          <span>
-            Diseñador UI/UX
+            <!-- Texto -->
+
             <br>
-            Programador
-          </span>
-        </h3>
 
-        <br>
+            <h3>Estudiante
+              <br><br>
+              <span>
+                Diseñador UI/UX
+                <br>
+                Programador
+              </span>
+            </h3>
 
-        <a href="#">Contacto</a>
+            <br>
+
+            <a href="#">Contacto</a>
+          </div>
+        </div>
+        <div class="descripcion">
+          <!-- <p>
+            Soy un estudiante de ingeniería en computación con un fuerte enfoque en el <b>desarrollo web</b>. Soy un
+            <b>programador</b> hábil en lenguajes como <i>Javascript, Python, Java y C</i>, y tengo conocimientos sólidos en
+            diseño <i>UI/UX</i>. Actualmente estoy buscando una oportunidad como <b>desarrollador web</b> en la que pueda
+            poner en práctica mis habilidades técnicas y de diseño. Si bien soy originario de Managua, Nicaragua, estoy
+            abierto a oportunidades en cualquier parte del mundo. ¡No dude en ponerse en contacto conmigo si cree que podemos
+            trabajar juntos!
+          </p> -->
+          <p>
+            Soy un estudiante de <i>ingeniería en computación</i> con experiencia en desarrollo web y habilidades en lenguajes como <b>Javascript, Python, Java y C.</b> Busco oportunidades como desarrollador web en cualquier lugar del mundo. ¡Contáctame si
+            quieres colaborar!
+          </p>
+        </div>
       </div>
     </div>
-    <div class="descripcion">
-      <p>
-        Soy un estudiante de ingeniería en computación con un fuerte enfoque en el <b>desarrollo web</b>. Soy un
-        <b>programador</b> hábil en lenguajes como <i>Javascript, Python, Java y C</i>, y tengo conocimientos sólidos en
-        diseño <i>UI/UX</i>. Actualmente estoy buscando una oportunidad como <b>desarrollador web</b> en la que pueda
-        poner en práctica mis habilidades técnicas y de diseño. Si bien soy originario de Managua, Nicaragua, estoy
-        abierto a oportunidades en cualquier parte del mundo. ¡No dude en ponerse en contacto conmigo si cree que podemos
-        trabajar juntos!
-      </p>
-    </div>
+    <app-project></app-project>
   </div>
 
-  <app-project></app-project>
-</div>
+  <!-- -------------------------------------------------------- -->
+
+
+  <!-- -------------------------------------------------------- -->
+
+</div> <!-- Fin div #header_body -->
 
 <!-- <div id="particles-js" style="height: 50vh;"></div> -->
 
@@ -81,3 +101,4 @@
 
 <!-- <script src="app.js"></script>
 <script src="particles.js"></script> -->
+

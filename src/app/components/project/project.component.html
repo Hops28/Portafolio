@@ -1,28 +1,36 @@
-<div id="titulo2"> <!-- Titulo -->
-  <span>Mis proyectos</span>
-  <div class="linea"></div>
-</div> <!-- Fin titulo2 -->
+<div id="projectBody">
+  <div id="titulo2"> <!-- Titulo -->
+    <span>Mis proyectos</span>
+    <div class="linea"></div>
+  </div> <!-- Fin titulo2 -->
 
-<div class="container">
-  <div class="menu">
-    <ul>
-      <li *ngFor="let categoria of categorias" [ngClass]="{ 'active': filtroCategoria === categoria }">
-        <a class="btn-menu" (click)="filtroCategoria = categoria; aplicarFiltro();">{{ categoria }}</a>
-      </li>
-    </ul>
-  </div>  <!-- Fin menu -->
+  <div class="container">
+    <div class="menu">
+      <ul>
+        <li *ngFor="let categoria of categorias" [ngClass]="{ 'active': filtroCategoria === categoria }">
+          <a class="btn-menu" (click)="filtroCategoria = categoria; aplicarFiltro();">{{ categoria }}</a>
+        </li>
+      </ul>
+    </div>  <!-- Fin menu -->
 
-    <!----------------------------------------------->
+      <!----------------------------------------------->
 
-  <div id="galeria">
-    <div class="box-img" *ngFor="let proyecto of proyectosFiltrados" [ngClass]="[proyecto.Categoria, proyecto.Clase]"
-      [style.backgroundImage]="'url(' + proyecto.Imagen + ')'">
-      <div class="descripcion">
-        <h3>{{ proyecto.Nombre }}</h3>
-        <p>{{ proyecto.Descripcion }}</p>
+    <div id="galeria">
+      <div class="box-img" *ngFor="let proyecto of proyectosFiltrados" [ngClass]="[proyecto.Categoria, proyecto.Clase]"
+        [style.backgroundImage]="'url(' + proyecto.Imagen + ')'"
+        [ngStyle]="{
+          '--animate-duration': '0.3s'
+        }"
+        (mouseenter) = "hoverCaja(1, proyecto.Nombre)">
+        <!-- <div class="contenedorDescripcion">
+          <div class="descripcion">
+            <h3>{{ proyecto.Nombre }}</h3>
+            <p>{{ proyecto.Descripcion }}</p>
+          </div>
+        </div> -->
       </div>
-    </div>
-  </div> <!-- Fin galeria -->
+    </div> <!-- Fin galeria -->
+  </div> <!-- Fin container -->
+</div>
 
-</div> <!-- Fin container -->
 

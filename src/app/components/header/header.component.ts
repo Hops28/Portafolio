@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {  HostListener } from "@angular/core";
 
+
 // declare var particlesJS: any; // declara la variable global de Particles.js
 
 // import '../../../assets/particles/app.js'
@@ -124,7 +125,21 @@ export class HeaderComponent implements OnInit
 window.addEventListener("scroll", () => {
   var navbar = document.querySelector("header");
 
-  navbar?.classList.toggle("sticky", window.scrollY > 400);
+  navbar?.classList.toggle("sticky",  window.scrollY > 400);
+
+  var fondito = document.getElementById("fondito");
+
+  if (fondito)
+  {
+    if(window.scrollY > 400)
+    {
+      fondito.classList.add('animate__animated', 'animate__fadeIn');
+    }
+    else
+    {
+      fondito.classList.remove('animate__animated', 'animate__fadeIn');
+    }
+  }
 })
 
 /************* H A M B U R G U E S A ****************/
