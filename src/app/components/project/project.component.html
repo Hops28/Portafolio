@@ -16,19 +16,37 @@
       <!----------------------------------------------->
 
     <div id="galeria">
-      <div class="box-img" *ngFor="let proyecto of proyectosFiltrados" [ngClass]="[proyecto.Categoria, proyecto.Clase]"
+      <figure class="box-img" *ngFor="let proyecto of proyectosFiltrados" [ngClass]="[proyecto.Categoria, proyecto.Clase]"
+      [style.backgroundImage]="'url(' + proyecto.Imagen + ')'"
+      [ngStyle]="{
+          '--animate-duration': '0.3s'
+        }"
+        (mouseenter) = "hoverCaja(1, proyecto.Nombre)">
+
+        <!-- IMAGEN -->
+        <!-- <img src="{{proyecto.Imagen}}" alt=""> -->
+
+        <!-- CONTENIDO -->
+        <div class="contenido-box-img">
+          <h3>{{proyecto.Nombre}}</h3>
+          <hr>
+          <p>{{proyecto.Descripcion}}</p>
+        </div>
+      </figure>
+
+      <!-- <div class="box-img" *ngFor="let proyecto of proyectosFiltrados" [ngClass]="[proyecto.Categoria, proyecto.Clase]"
         [style.backgroundImage]="'url(' + proyecto.Imagen + ')'"
         [ngStyle]="{
           '--animate-duration': '0.3s'
         }"
         (mouseenter) = "hoverCaja(1, proyecto.Nombre)">
-        <!-- <div class="contenedorDescripcion">
+        <div class="contenedorDescripcion">
           <div class="descripcion">
             <h3>{{ proyecto.Nombre }}</h3>
             <p>{{ proyecto.Descripcion }}</p>
           </div>
-        </div> -->
-      </div>
+        </div>
+      </div> -->
     </div> <!-- Fin galeria -->
   </div> <!-- Fin container -->
 </div>

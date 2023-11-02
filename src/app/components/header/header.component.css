@@ -46,7 +46,7 @@
 #header_body {
   min-height: 100vh;
   background: #0C192C;
-  margin-bottom: 20vh;
+  /* margin-bottom: 20vh; */
   z-index: 3;
 }
 
