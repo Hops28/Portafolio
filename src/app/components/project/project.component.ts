@@ -122,4 +122,20 @@ export class ProjectComponent {
       }, 300)
     }
   }
+
+  mostrarModal(tipo : number): void {
+    let modal = document.getElementById("modalProject");
+
+    if (modal)
+    {
+      if (tipo === 1)
+      {
+        modal.classList.add("showModal");
+      }
+      else if (tipo === 0)
+      {
+        modal.classList.remove("showModal");
+      }
+    }
+  }
 }

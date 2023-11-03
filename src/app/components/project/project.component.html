@@ -1,3 +1,5 @@
+<div class="separador"></div>
+
 <div id="projectBody">
   <div id="titulo2"> <!-- Titulo -->
     <span>Mis proyectos</span>
@@ -21,7 +23,8 @@
       [ngStyle]="{
           '--animate-duration': '0.3s'
         }"
-        (mouseenter) = "hoverCaja(1, proyecto.Nombre)">
+        (mouseenter) = "hoverCaja(1, proyecto.Nombre)"
+        (click) = "mostrarModal(1)">
 
         <!-- IMAGEN -->
         <!-- <img src="{{proyecto.Imagen}}" alt=""> -->
@@ -49,6 +52,23 @@
       </div> -->
     </div> <!-- Fin galeria -->
   </div> <!-- Fin container -->
+</div> <!-- Fin projectBody -->
+
+<div id="modalProject" (click)="mostrarModal(0)">
+  <div id="modalContent">
+    <div id="ruedaContent"></div>
+
+    <div id="arribaModalProject">
+
+    </div>
+
+    <!-- ----------------------------------- -->
+
+    <div id="abajoModalProject">
+      <h2 id="tituloProjectModal">
+
+      </h2>
+      <p id="descripcionProjectModal"></p>
+    </div>
+  </div>
 </div>
-
-
