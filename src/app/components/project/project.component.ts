@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 interface Proyecto {
   Nombre: string,
-  Imagen: string,
+  Imagen: string[],
   Descripcion: string,
   Categoria: string,
   Clase: string
@@ -18,28 +18,28 @@ export class ProjectComponent {
   Proyectos: Proyecto[] = [
     {
       Nombre: "Proyecto1",
-      Imagen: "../../../assets/Portada2.jpg",
+      Imagen: ["../../../assets/Portada2.jpg"],
       Descripcion: "Descripción del proyecto 1",
       Categoria: "Django",
       Clase: "animate__animated animate__zoomIn"
     },
     {
       Nombre: "Proyecto2",
-      Imagen: "../../../assets/Portada3.jpg",
+      Imagen: ["../../../assets/Portada3.jpg"],
       Descripcion: "Descripción del proyecto 2",
       Categoria: "Django",
       Clase: "animate__animated animate__zoomIn"
     },
     {
       Nombre: "Proyecto3",
-      Imagen: "../../../assets/Portada4.jpg",
+      Imagen: ["../../../assets/Portada4.jpg"],
       Descripcion: "Descripción del proyecto 3",
       Categoria: "Angular",
       Clase: "animate__animated animate__zoomIn"
     },
     {
       Nombre: "Proyecto4",
-      Imagen: "../../../assets/Portada5.png",
+      Imagen: ["../../../assets/Portada5.png"],
       Descripcion: "Descripción del proyecto 4",
       Categoria: "Flask",
       Clase: "animate__animated animate__zoomIn"
@@ -123,19 +123,23 @@ export class ProjectComponent {
     }
   }
 
-  mostrarModal(tipo : number): void {
+
+  mostrarModal(imagenes : string, titulo : string, descripcion : string): void
+  {
+    let modal = document.getElementById("modalProject");
+    if (modal)
+    {
+      modal.classList.add("showModal");
+    }
+  }
+
+  ocultarModal ()
+  {
     let modal = document.getElementById("modalProject");
 
     if (modal)
     {
-      if (tipo === 1)
-      {
-        modal.classList.add("showModal");
-      }
-      else if (tipo === 0)
-      {
-        modal.classList.remove("showModal");
-      }
+      modal.classList.remove("showModal");
     }
   }
 }
