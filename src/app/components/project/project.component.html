@@ -54,7 +54,9 @@
   </div> <!-- Fin container -->
 </div> <!-- Fin projectBody -->
 
-<div id="modalProject" (click)="ocultarModal()">
+<div id="modalProject">
+  <div id="fondoModal" (click)="ocultarModal()"></div>
+
   <div id="modalContent">
     <!-- Cuadro para el contenido -->
 
@@ -65,7 +67,22 @@
     <div id="modalContentContent">
       <!-- Encabezado del contenido -->
       <div id="arribaModalProject">
-        <img src="../../../assets/Portada5.png" alt="">
+        <!-- <img src="../../../assets/Portada5.png" alt=""> -->
+
+        <swiper-container navigation="true" pagination="true" scrollbar="true" autoplay-delay="5000" loop="true" height="800px">
+          <swiper-slide>
+            <img src="../../../assets/Portada2.jpg" alt="">
+          </swiper-slide>
+          <swiper-slide>
+            <img src="../../../assets/Portada3.jpg" alt="">
+          </swiper-slide>
+          <swiper-slide>
+            <img src="../../../assets/Portada4.jpg" alt="">
+          </swiper-slide>
+          <swiper-slide>
+            <img src="../../../assets/Portada5.png" alt="">
+          </swiper-slide>
+        </swiper-container>
       </div>
 
       <!-- ----------------------------------- -->
@@ -88,9 +105,3 @@
 <!-- -------------------------------------------------------- -->
 <!-- -------------------------------------------------------- -->
 <!-- -------------------------------------------------------- -->
-
-<swiper-container>
-  <swiper-slide>Slide 1</swiper-slide>
-  <swiper-slide>Slide 2</swiper-slide>
-  <swiper-slide>Slide 3</swiper-slide>
-</swiper-container>

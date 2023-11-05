@@ -184,7 +184,7 @@
 
   z-index: 51;
 
-  background-color: rgba(0, 0, 0, .5);
+  /* background-color: rgba(0, 0, 0, .5); */
 
   display: flex;
   justify-content: center;
@@ -194,6 +194,13 @@
   pointer-events: none;
 
   transition: all .5s ease;
+}
+
+#fondoModal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .5);
 }
 
 #modalProject.showModal {
@@ -282,7 +289,7 @@
   width: 0;
 }
 
-#modalContent #modalContentContent #arribaModalProject img {
+#modalContent #modalContentContent #arribaModalProject swiper-container {
   border-bottom: solid 10px hsl(216, 57%, 15%);
   width: 100%;
 }
@@ -305,4 +312,54 @@
 #modalContent #modalContentContent #abajoModalProject p {
   width: calc(100% - 20px);
   margin: 15px 10px 35px 10px;
+}
+
+/* *************************************************** */
+/* ******************** S W I P E R ********************* */
+/* *************************************************** */
+
+swiper-container::part(container) {
+  height: 250px;
+  width: 100%;
+}
+
+swiper-container::part(bullet),
+swiper-container::part(bullet-active)
+{
+  display: none;
+}
+
+swiper-container::part(button-prev),
+swiper-container::part(button-next)
+{
+  color: white;
+  height: 20px;
+  padding: 12px 6px;
+  background-color: rgba(0, 0, 0, .65);
+  opacity: 0;
+
+  transition: all .6s ease;
+}
+
+swiper-container:hover::part(button-prev),
+swiper-container:hover::part(button-next){
+  opacity: 1;
+}
+
+swiper-container::part(button-next) {
+  right: 0;
+  border-radius: 20px 0 0 20px;
+  padding-left: 13px;
+}
+
+swiper-container::part(button-prev) {
+  left: 0;
+  border-radius: 0 20px 20px 0;
+  padding-right: 13px;
+}
+
+swiper-slide img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
 }
