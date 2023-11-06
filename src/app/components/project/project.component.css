@@ -217,8 +217,8 @@
 
   border-radius: 20px;
 
-  height: 70vh;
-  width: 40vw;
+  height: 80vh;
+  width: 60vw;
 
   margin-bottom: 25vh;
   transition: all .5s ease;
@@ -233,13 +233,13 @@
 #modalContent::before {
   content: '';
 
-  inset: -30% 15vw;
+  inset: -40% 25vw;
 
   background: linear-gradient(#4FC3DC, #9500e2);
 
   position: absolute;
 
-  animation: rotacionModal 10s linear infinite;
+  animation: rotacionModal 15s linear infinite;
 }
 
 #modalContent::after {
@@ -319,7 +319,7 @@
 /* *************************************************** */
 
 swiper-container::part(container) {
-  height: 250px;
+  height: 350px;
   width: 100%;
 }
 
@@ -359,7 +359,10 @@ swiper-container::part(button-prev) {
 }
 
 swiper-slide img {
-  height: 400px;
+  height: 100%;
   width: 100%;
   object-fit: cover;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }

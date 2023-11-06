@@ -4,6 +4,7 @@ interface Proyecto {
   Nombre: string,
   Imagen: string[],
   Descripcion: string,
+  Descripcion_Corta: string,
   Categoria: string,
   Clase: string
 }
@@ -20,6 +21,7 @@ export class ProjectComponent {
       Nombre: "Proyecto1",
       Imagen: ["../../../assets/Portada2.jpg"],
       Descripcion: "Descripción del proyecto 1",
+      Descripcion_Corta: "Descripción corta del proyecto 1",
       Categoria: "Django",
       Clase: "animate__animated animate__zoomIn"
     },
@@ -27,6 +29,7 @@ export class ProjectComponent {
       Nombre: "Proyecto2",
       Imagen: ["../../../assets/Portada3.jpg"],
       Descripcion: "Descripción del proyecto 2",
+      Descripcion_Corta: "Descripción corta del proyecto 2",
       Categoria: "Django",
       Clase: "animate__animated animate__zoomIn"
     },
@@ -34,6 +37,7 @@ export class ProjectComponent {
       Nombre: "Proyecto3",
       Imagen: ["../../../assets/Portada4.jpg"],
       Descripcion: "Descripción del proyecto 3",
+      Descripcion_Corta: "Descripción corta del proyecto 3",
       Categoria: "Angular",
       Clase: "animate__animated animate__zoomIn"
     },
@@ -41,6 +45,7 @@ export class ProjectComponent {
       Nombre: "Proyecto4",
       Imagen: ["../../../assets/Portada5.png"],
       Descripcion: "Descripción del proyecto 4",
+      Descripcion_Corta: "Descripción corta del proyecto 4",
       Categoria: "Flask",
       Clase: "animate__animated animate__zoomIn"
     }
@@ -124,11 +129,20 @@ export class ProjectComponent {
   }
 
 
-  mostrarModal(imagenes : string, titulo : string, descripcion : string): void
+  mostrarModal(imagenes : string[], titulo : string, descripcion : string): void
   {
     let modal = document.getElementById("modalProject");
     if (modal)
     {
+      let contenedorSlider = document.querySelector("swiper-container");
+      // let contenidoSlider : string = "";
+
+      // imagenes.forEach(element => {
+      //   contenidoSlider += "<swiper-slide><img src='../../../assets/Portada2.jpg' alt=''></swiper-slide>"
+      // });
+
+      console.log(imagenes)
+
       modal.classList.add("showModal");
     }
   }

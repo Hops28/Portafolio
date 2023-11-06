@@ -24,7 +24,7 @@
           '--animate-duration': '0.3s'
         }"
         (mouseenter) = "hoverCaja(1, proyecto.Nombre)"
-        (click) = "mostrarModal('{{proyecto.Imagen}}', '{{proyecto.Nombre}}', '{{proyecto.Descripcion}}')">
+        (click) = "mostrarModal(proyecto.Imagen, '{{proyecto.Nombre}}', '{{proyecto.Descripcion}}')">
 
         <!-- IMAGEN -->
         <!-- <img src="{{proyecto.Imagen}}" alt=""> -->
@@ -33,7 +33,7 @@
         <div class="contenido-box-img">
           <h3>{{proyecto.Nombre}}</h3>
           <hr>
-          <p>{{proyecto.Descripcion}}</p>
+          <p>{{proyecto.Descripcion_Corta}}</p>
         </div>
       </figure>
 
@@ -71,7 +71,7 @@
 
         <swiper-container navigation="true" pagination="true" scrollbar="true" autoplay-delay="5000" loop="true" height="800px">
           <swiper-slide>
-            <img src="../../../assets/Portada2.jpg" alt="">
+            <img src="assets/Portada2.jpg" alt="">
           </swiper-slide>
           <swiper-slide>
             <img src="../../../assets/Portada3.jpg" alt="">
