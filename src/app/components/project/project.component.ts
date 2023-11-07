@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Swiper } from 'swiper'
 
 interface Proyecto {
   Nombre: string,
@@ -19,7 +20,10 @@ export class ProjectComponent {
   Proyectos: Proyecto[] = [
     {
       Nombre: "Proyecto1",
-      Imagen: ["../../../assets/Portada2.jpg"],
+      Imagen: ["../../../assets/Portada2.jpg",
+                      "../../../assets/Portada2.jpg",
+                      "../../../assets/Portada2.jpg",
+                      "../../../assets/Portada2.jpg",],
       Descripcion: "Descripción del proyecto 1",
       Descripcion_Corta: "Descripción corta del proyecto 1",
       Categoria: "Django",
@@ -27,7 +31,9 @@ export class ProjectComponent {
     },
     {
       Nombre: "Proyecto2",
-      Imagen: ["../../../assets/Portada3.jpg"],
+      Imagen: ["../../../assets/Portada3.jpg",
+                      "../../../assets/Portada3.jpg",
+                      "../../../assets/Portada3.jpg"],
       Descripcion: "Descripción del proyecto 2",
       Descripcion_Corta: "Descripción corta del proyecto 2",
       Categoria: "Django",
@@ -35,7 +41,8 @@ export class ProjectComponent {
     },
     {
       Nombre: "Proyecto3",
-      Imagen: ["../../../assets/Portada4.jpg"],
+      Imagen: ["../../../assets/Portada4.jpg",
+                      "../../../assets/Portada4.jpg"],
       Descripcion: "Descripción del proyecto 3",
       Descripcion_Corta: "Descripción corta del proyecto 3",
       Categoria: "Angular",
@@ -55,6 +62,7 @@ export class ProjectComponent {
   categorias: string[] = ['Todos', 'Django', 'Flask', 'Angular'];
   filtroCategoria: string = 'Todos';
   proyectosFiltrados: Proyecto[] = [];
+  urlImagenes : string[] = [];
 
   constructor() {
     this.aplicarFiltro();
@@ -128,22 +136,44 @@ export class ProjectComponent {
     }
   }
 
-
   mostrarModal(imagenes : string[], titulo : string, descripcion : string): void
   {
     let modal = document.getElementById("modalProject");
     if (modal)
     {
-      let contenedorSlider = document.querySelector("swiper-container");
-      // let contenidoSlider : string = "";
 
-      // imagenes.forEach(element => {
-      //   contenidoSlider += "<swiper-slide><img src='../../../assets/Portada2.jpg' alt=''></swiper-slide>"
-      // });
+      this.urlImagenes = [];
 
-      console.log(imagenes)
+      imagenes.forEach(url => {
+        this.urlImagenes.push(url)
+      });
+
+      // console.log(this.urlImagenes);
 
       modal.classList.add("showModal");
+
+      // Contenedor del slider donde se van a agregar los slider
+      let theSwiper = new Swiper("swiper-container");
+
+      // {
+      //   autoplay : {
+      //     delay : 5000
+      //   },
+      //   navigation : true,
+      //   scrollbar : true,
+      //   loop : true,
+      //   slidesPerGroup : 1,
+      //   slidesPerView : 1
+      // }
+
+      // if(contenedorSlider)
+      // contenedorSlider.innerHTML = contenedorSlider.innerHTML
+
+      theSwiper.update();
+
+      theSwiper.autoplay.start();
+
+      console.log(theSwiper);
     }
   }
 

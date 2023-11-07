@@ -26,9 +26,6 @@
         (mouseenter) = "hoverCaja(1, proyecto.Nombre)"
         (click) = "mostrarModal(proyecto.Imagen, '{{proyecto.Nombre}}', '{{proyecto.Descripcion}}')">
 
-        <!-- IMAGEN -->
-        <!-- <img src="{{proyecto.Imagen}}" alt=""> -->
-
         <!-- CONTENIDO -->
         <div class="contenido-box-img">
           <h3>{{proyecto.Nombre}}</h3>
@@ -36,20 +33,6 @@
           <p>{{proyecto.Descripcion_Corta}}</p>
         </div>
       </figure>
-
-      <!-- <div class="box-img" *ngFor="let proyecto of proyectosFiltrados" [ngClass]="[proyecto.Categoria, proyecto.Clase]"
-        [style.backgroundImage]="'url(' + proyecto.Imagen + ')'"
-        [ngStyle]="{
-          '--animate-duration': '0.3s'
-        }"
-        (mouseenter) = "hoverCaja(1, proyecto.Nombre)">
-        <div class="contenedorDescripcion">
-          <div class="descripcion">
-            <h3>{{ proyecto.Nombre }}</h3>
-            <p>{{ proyecto.Descripcion }}</p>
-          </div>
-        </div>
-      </div> -->
     </div> <!-- Fin galeria -->
   </div> <!-- Fin container -->
 </div> <!-- Fin projectBody -->
@@ -69,19 +52,18 @@
       <div id="arribaModalProject">
         <!-- <img src="../../../assets/Portada5.png" alt=""> -->
 
-        <swiper-container navigation="true" pagination="true" scrollbar="true" autoplay-delay="5000" loop="true" height="800px">
-          <swiper-slide>
-            <img src="assets/Portada2.jpg" alt="">
+        <swiper-container navigation="true" scrollbar="true" autoplay-delay="7000" pauseOnMouseEnter="true" disableOnInteraction="false" slidesPerGroup="1" slidesPerView="1">
+          <!-- <swiper-slide>
+            <img src="../../../assets/foto001.jpg" alt="">
           </swiper-slide>
           <swiper-slide>
-            <img src="../../../assets/Portada3.jpg" alt="">
+            <img src="../../../assets/foto001.jpg" alt="">
+          </swiper-slide> -->
+
+          <swiper-slide *ngFor="let urlImagen of urlImagenes">
+            <img src="{{urlImagen}}" alt="" class="imgSlider">
           </swiper-slide>
-          <swiper-slide>
-            <img src="../../../assets/Portada4.jpg" alt="">
-          </swiper-slide>
-          <swiper-slide>
-            <img src="../../../assets/Portada5.png" alt="">
-          </swiper-slide>
+
         </swiper-container>
       </div>
 
