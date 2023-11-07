@@ -227,7 +227,7 @@
 
   border-radius: 20px;
 
-  height: 80vh;
+  height: 90vh;
   width: 60vw;
 
   margin-bottom: 25vh;
@@ -238,6 +238,19 @@
 
   overflow: hidden;
 
+}
+
+@media (max-width: 1000px)
+{
+  #modalContent {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 800px) {
+  #modalContent {
+    width: 80vw;
+  }
 }
 
 #modalContent::before {
@@ -299,9 +312,13 @@
   width: 0;
 }
 
-#modalContent #modalContentContent #arribaModalProject swiper-container {
+#modalContent #modalContentContent #arribaModalProject swiper-container{
   border-bottom: solid 10px hsl(216, 57%, 15%);
   width: 100%;
+}
+
+#modalContent #modalContentContent #abajoModalProject {
+  padding: 20px;
 }
 
 #modalContent #modalContentContent #abajoModalProject h2,
@@ -331,6 +348,26 @@
 swiper-container::part(container) {
   height: 350px;
   width: 100%;
+
+  transition: all .5s ease;
+}
+
+@media (max-width: 700px) {
+#modalContent #modalContentContent #arribaModalProject swiper-container::part(container){
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+#modalContent #modalContentContent #arribaModalProject swiper-container::part(container) {
+    height: 250px;
+  }
+}
+
+@media (max-width: 400px) {
+  #modalContent #modalContentContent #arribaModalProject swiper-container::part(container) {
+    height: 225px;
+  }
 }
 
 swiper-container::part(bullet){
