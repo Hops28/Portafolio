@@ -169,11 +169,9 @@ export class ProjectComponent {
       // if(contenedorSlider)
       // contenedorSlider.innerHTML = contenedorSlider.innerHTML
 
-      theSwiper.update();
+      theSwiper.init();
 
-      theSwiper.autoplay.start();
-
-      console.log(theSwiper);
+      // console.log(theSwiper);
     }
   }
 
