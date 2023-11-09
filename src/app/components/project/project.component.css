@@ -342,8 +342,8 @@
 }
 
 #btnCerrarModal {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, .5);
   /* background-color: #4FC3DC; */
@@ -358,8 +358,8 @@
 
   position: absolute;
 
-  right: 10px;
-  top: 10px;
+  right: 25px;
+  top: 25px;
 
   cursor: pointer;
 
@@ -368,8 +368,48 @@
   opacity: 0;
 }
 
+#modalBotonesProject {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#modalBotonesProject #btnGithub,
+#modalBotonesProject #btnWorld {
+  margin-right: 10px;
+  color: #ffffff;
+
+  transition: all .5s ease;
+}
+
+#modalBotonesProject #btnGithub:hover {
+  color: hsl(191, 67%, 75%);
+}
+
+#modalBotonesProject #btnWorld:hover {
+  color: hsl(191, 67%, 75%);
+}
+
+#modalBotonesProject #btnGithub {
+  animation: flotando 3s ease-in-out infinite;
+}
+
+#modalBotonesProject #btnWorld {
+  animation: flotando 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
 #btnCerrarModal:hover {
   background-color: hsla(0, 0%, 10%, 0.502)
+}
+
+@keyframes flotando {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 /* *************************************************** */
@@ -435,7 +475,7 @@ swiper-container:hover::part(button-next){
   opacity: 1;
 }
 
-#arribaModalProject:hover #btnCerrarModal {
+#modalContent:hover #btnCerrarModal {
   opacity: 1;
 }
 

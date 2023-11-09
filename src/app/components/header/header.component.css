@@ -538,6 +538,7 @@ header ul li a:hover {
   cursor: pointer;
   display: none;
   transition: .5s;
+  z-index: 1;
 }
 
 @media (max-width : 550px) {

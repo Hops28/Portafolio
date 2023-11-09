@@ -46,11 +46,12 @@
     <div id="ruedaContent"></div>
     <!-- El objeto que gira atrás del contenido -->
 
+    <button id="btnCerrarModal" (click)="ocultarModal() "><i class='bx bx-x bx-md' style="color: hsla(191, 60%, 85%, .8);"></i></button>
+
     <!-- Contenido real -->
     <div id="modalContentContent">
       <!-- Encabezado del contenido -->
       <div id="arribaModalProject">
-        <button id="btnCerrarModal" (click)="ocultarModal()"><i class='bx bx-x bx-md' style="color: hsla(191, 60%, 85%, .8);"></i></button>
         <!-- <img src="../../../assets/Portada5.png" alt=""> -->
 
         <swiper-container navigation="true" scrollbar="true" pagination="true" slidesPerGroup="1" slidesPerView="1" rewind="true">
@@ -79,6 +80,12 @@
         <p id="descripcionProjectModal">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus praesentium et quia eius hic amet, repellendus eaque voluptates ut quod?
         </p>
+
+        <!-- boton de github esquina inferior derecha animacion que flota -->
+        <div id="modalBotonesProject">
+          <a href="" id="btnGithub" title="Ver proyecto en Github"><i class='bx bxl-github bx-md'></i></a>
+          <a href="" id="btnWorld" title="Ver proyecto"><i class='bx bx-world bx-md'></i></a>
+        </div>
       </div>
     </div>
 
