@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 html {
@@ -30,14 +33,4 @@ body::-webkit-scrollbar-thumb {
 
 html {
   scroll-behavior: smooth;
-}
-
-#particles-js {
-  background-color: transparent;
-  width: auto;
-  height: 100vh;
-  margin-top: 120vh;
-  position: absolute;
-  top: 0;
-  z-index: 0;
 }
