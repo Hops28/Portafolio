@@ -70,7 +70,7 @@
   justify-content: center;
   align-items: center;
 
-  width: calc(50% - 2px);
+  width: calc(30% - 2px);
 }
 
 #iconsContent {
@@ -78,15 +78,47 @@
   grid-template-columns: 1fr 1fr;
 
   gap: 10px;
+
+  overflow: hidden;
 }
 
-#iconsContent img {
+#iconsContent i {
   color: white;
-  width: 50px;
-  height: 50px;
 }
 
 #formContactContent {
-  width: 50%;
+  width: 70%;
   height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputContactForm {
+  margin: 10px 0;
+}
+
+.inputContactForm input,
+.inputContactForm textarea{
+  background-color: hsl(216, 57%, 20%);
+
+  border: solid 2px white;
+  border-radius: 10px;
+
+  padding: 10px;
+}
+
+.inputContactForm span {
+  position: absolute;
+
+  margin: 5px 0 0 10px;
+
+  color: hsla(216, 57%, 80%, .5);
+
+  pointer-events: none;
+}
+
+.inputContactForm .infoContactos:focus~span, .inputContactForm .infoContactos:valid~span {
+  color: black;
 }

@@ -3,14 +3,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 html {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+}
+
+html.no-touch {
+  overflow-x: hidden;
 }
 
 body {
@@ -31,6 +33,3 @@ body::-webkit-scrollbar-thumb {
   border-bottom-left-radius: 15px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
