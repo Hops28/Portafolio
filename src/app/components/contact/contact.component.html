@@ -20,20 +20,20 @@
       <form action="post">
         <!-- Input para correo -->
         <div class="inputContactForm">
-          <input type="email" name="" id="txtEmailContact" class="infoContactos">
-          <span>Correo</span>
+          <input type="email" name="" id="txtEmailContact" class="infoContactos" (blur)="verificarValoresInputContact($event)" autocomplete="off">
+          <label class="lblContacts" for="txtEmailContact">Correo</label>
         </div>
 
         <!-- Input para asunto -->
         <div class="inputContactForm">
-          <input type="text" name="" id="txtTopicContact" class="infoContactos">
-          <span>Asunto</span>
+          <input type="text" name="" id="txtTopicContact" class="infoContactos" (blur)="verificarValoresInputContact($event)" autocomplete="off">
+          <label class="lblContacts" for="txtTopicContact">Asunto</label>
         </div>
 
         <!-- Input para descripcion -->
         <div class="inputContactForm">
-          <textarea name="" id="" cols="30" rows="10" id="txtDescriptionContact" class="infoContactos"></textarea>
-          <span>Descripcion</span>
+          <textarea name="" id="" cols="30" rows="10" id="txtDescriptionContact" class="infoContactos" (blur)="verificarValoresInputContact($event)" autocomplete="off"></textarea>
+          <label class="lblContacts" for="txtDescriptionContact">Descripcion</label>
         </div>
       </form>
     </div>

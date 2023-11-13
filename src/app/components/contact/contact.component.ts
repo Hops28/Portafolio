@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  verificarValoresInputContact(event : any) {
+    if (event)
+    {
+      let inputContact = event.target as HTMLInputElement;
+
+      console.log(inputContact);
+
+      if (inputContact.value != "")
+      {
+        inputContact.classList.add("valido");
+      }
+      else
+      {
+        inputContact.classList.remove("valido");
+      }
+    }
+  }
 }

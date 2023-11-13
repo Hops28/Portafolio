@@ -104,7 +104,7 @@
     0 0 50px #4FC3DC,
     0 0 100px #4FC3DC;
 
-  animation: burbuja 12s ease-out infinite;
+  animation: burbuja 15s ease-out infinite;
   animation-delay: calc(1s * var(--r));
   animation-duration: calc(350s / var(--d));
 }
@@ -374,7 +374,7 @@ header ul li a:hover {
   inset: -10px 105px;
   background: linear-gradient(315deg, #4FC3DC, #9500e2);
   transition: 0.5s;
-  animation: rotation 6s linear infinite;
+  animation: rotation 10s linear infinite;
 }
 
 .box:hover::before {

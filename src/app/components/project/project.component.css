@@ -275,7 +275,7 @@
 
   position: absolute;
 
-  animation: rotacionModal 15s linear infinite;
+  animation: rotacionModal 20s linear infinite;
 }
 
 #modalContent::after {
