@@ -6,13 +6,32 @@
     <div class="linea"></div>
   </div> <!-- Fin titulo2 -->
 
+  <div id="comentarioContactos">
+    <span>¿Tiene alguna pregunta o quiere trabajar juntos?</span>
+  </div>
+
   <div id="contactContent">
     <div id="iconsContactContent">
       <div id="iconsContent">
-        <i class='bx bxs-envelope bx-lg bx-tada-hover'></i>
-        <i class='bx bxl-github bx-lg bx-tada-hover'></i>
-        <i class='bx bxl-facebook-circle bx-lg bx-tada-hover'></i>
-        <i class='bx bxl-linkedin-square bx-lg bx-tada-hover'></i>
+        <!-- Correo -->
+        <a href="" target="_blank">
+          <i class='bx bxs-envelope bx-lg bx-tada-hover'></i>
+        </a>
+
+        <!-- Github -->
+        <a href="https://github.com/Hops28" target="_blank">
+          <i class='bx bxl-github bx-lg bx-tada-hover'></i>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/Hops.jc/" target="_blank">
+          <i class='bx bxl-facebook-circle bx-lg bx-tada-hover'></i>
+        </a>
+
+        <!-- linkedin -->
+        <a href="https://www.linkedin.com/in/jj-medina/" target="_blank">
+          <i class='bx bxl-linkedin-square bx-lg bx-tada-hover'></i>
+        </a>
       </div>
     </div>
     <div id="separadorVertical"></div>
@@ -32,7 +51,7 @@
 
         <!-- Input para descripcion -->
         <div class="inputContactForm">
-          <textarea name="" id="" cols="30" rows="10" id="txtDescriptionContact" class="infoContactos" (blur)="verificarValoresInputContact($event)" autocomplete="off"></textarea>
+          <textarea name="" id="" cols="30" rows="10" id="txtDescriptionContact" class="infoContactos" (blur)="verificarValoresInputContact($event)" autocomplete="off" ></textarea>
           <label class="lblContacts" for="txtDescriptionContact">Descripcion</label>
         </div>
       </form>
