@@ -150,13 +150,13 @@ textarea {
 
   border-top: solid 2px rgba(255, 255, 255, .7);
   border-left: solid 2px rgba(255, 255, 255, .7);
+  box-shadow: 4px 4px 0 hsla(0, 0%, 0%, 0.5);
   border-radius: 10px;
 
   font-size: large;
 
   padding: 5px 0 5px 10px;
 
-  box-shadow: 4px 4px 0 hsla(0, 0%, 0%, 0.5);
 }
 
 .infoContactos:focus~label {
@@ -250,3 +250,44 @@ textarea {
     font-size: small;
   }
 } */
+
+/************************ S U B M I T ***************************/
+
+#btnEnviarCorreo {
+  display: flex;
+  justify-content: center;
+}
+
+#btnEnviarCorreo #btnEnviar {
+  background-color: hsl(191, 67%, 45%);
+  color: white;
+  font-weight: 600;
+  font-size: large;
+
+  border-top: solid 2px rgba(255, 255, 255, .7);
+  border-left: solid 2px rgba(255, 255, 255, .7);
+  box-shadow: 4px 4px 0 hsla(0, 0%, 0%, 0.5);
+
+  padding: 7px 15px;
+  margin-top: 15px;
+
+  /* border: none; */
+  cursor: pointer;
+
+  border-radius: 7px;
+
+  transition: all .4s ease;
+}
+
+#btnEnviarCorreo #btnEnviar:hover {
+  background-color: hsl(191, 67%, 40%);
+}
+
+#btnEnviarCorreo #btnEnviar:disabled {
+  background-color: hsl(191, 10%, 40%);
+  cursor: not-allowed;
+}
+
+#btnEnviarCorreo #btnEnviar:disabled:hover {
+  background-color: hsl(191, 10%, 44%);
+}
