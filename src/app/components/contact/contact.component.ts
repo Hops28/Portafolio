@@ -26,28 +26,28 @@ export class ContactComponent {
         inputContact.classList.remove("valido");
       }
     }
+
   }
 
-  /*Declarar oyentes de acción que van a detectar si se escribió algo en los campos de contactos para posteriormente habilitar el botón de enviar*/
+  tecla : any;
 
-  verificarCorreo () {
-    console.log(this.txtCorreo, this.txtAsunto, this.txtDescripcion);
-    // let btnEnviar = document.getElementById("btnEnviar");
+  cambiarCampo(event : any){
+    if (event.target.tagName === 'INPUT')
+    {
+      this.tecla = event.target as HTMLInputElement
+    }
+    else if (event.target.tagName === 'TEXTAREA') {
+      this.tecla = event.target as HTMLTextAreaElement
+    }
 
-    // if (this.txtCorreo != "" && this.txtAsunto != "" && this.txtDescripcion != "")
-    // {
-    //   if (btnEnviar)
-    //   {
-    //     let btn = btnEnviar as HTMLInputElement;
-    //     btn.disabled = false;
-    //   }
-    // }
-    // else{
-    //   if (btnEnviar)
-    //   {
-    //     let btn = btnEnviar as HTMLInputElement;
-    //     btn.disabled = true;
-    //   }
-    // }
+    if (this.tecla.key === 'Enter'){
+
+      console.log("entró");
+
+      if (this.tecla.id === "txtEmailContact")
+      {
+        document.getElementById("txtTopicContact")?.focus();
+      }
+    }
   }
 }
