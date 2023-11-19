@@ -41,7 +41,6 @@
         <div class="inputContactForm">
           <input type="email" name="Correo" id="txtEmailContact" class="infoContactos"
           (blur)="verificarValoresInputContact($event)" autocomplete="off"
-          (keydown)="cambiarCampo($event)"
           [(ngModel)]="txtCorreo"
           required>
           <label class="lblContacts" for="txtEmailContact">Correo</label>

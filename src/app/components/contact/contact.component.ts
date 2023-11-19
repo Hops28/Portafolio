@@ -29,25 +29,25 @@ export class ContactComponent {
 
   }
 
-  tecla : any;
+  // tecla : any;
 
-  cambiarCampo(event : any){
-    if (event.target.tagName === 'INPUT')
-    {
-      this.tecla = event.target as HTMLInputElement
-    }
-    else if (event.target.tagName === 'TEXTAREA') {
-      this.tecla = event.target as HTMLTextAreaElement
-    }
+  // cambiarCampo(event : any){
+  //   if (event.target.tagName === 'INPUT')
+  //   {
+  //     this.tecla = event.target as HTMLInputElement
+  //   }
+  //   else if (event.target.tagName === 'TEXTAREA') {
+  //     this.tecla = event.target as HTMLTextAreaElement
+  //   }
 
-    if (this.tecla.key === 'Enter'){
+  //   if (this.tecla.key === 'Enter'){
 
-      console.log("entró");
+  //     console.log("entró");
 
-      if (this.tecla.id === "txtEmailContact")
-      {
-        document.getElementById("txtTopicContact")?.focus();
-      }
-    }
-  }
+  //     if (this.tecla.id === "txtEmailContact")
+  //     {
+  //       document.getElementById("txtTopicContact")?.focus();
+  //     }
+  //   }
+  // }
 }
