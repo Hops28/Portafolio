@@ -36,12 +36,22 @@
     </div>
     <div id="separadorVertical"></div>
     <div id="formContactContent">
-      <form action="https://formsubmit.co/jasson.jjmc@gmail.com" method="post" #miFormulario="ngForm">
+      <form action="javascript:void(0)" (submit)="send()" method="post" #miFormulario="ngForm" id="FormularioContactos">
+        <!-- Input para nombre -->
+        <div class="inputContactForm">
+          <input type="email" name="Nombre" id="txtNameContact" class="infoContactos"
+          (blur)="verificarValoresInputContact($event)" autocomplete="off"
+          [(ngModel)]="txtNombre"
+          required>
+          <label class="lblContacts" for="txtNameContact">Nombre</label>
+        </div> <!-- cierre Input correo -->
+
         <!-- Input para correo -->
         <div class="inputContactForm">
           <input type="email" name="Correo" id="txtEmailContact" class="infoContactos"
           (blur)="verificarValoresInputContact($event)" autocomplete="off"
           [(ngModel)]="txtCorreo"
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
           required>
           <label class="lblContacts" for="txtEmailContact">Correo</label>
         </div> <!-- cierre Input correo -->
@@ -57,12 +67,12 @@
 
         <!-- Input para descripcion -->
         <div class="inputContactForm">
-          <textarea name="Descripcion" id="" cols="30" rows="10" id="txtDescriptionContact"
+          <textarea name="Descripcion" id="" cols="30" rows="6" id="txtDescriptionContact"
           class="infoContactos"
           (blur)="verificarValoresInputContact($event)" autocomplete="off"
           [(ngModel)]="txtDescripcion"
           required></textarea>
-          <label class="lblContacts" for="txtDescriptionContact">Descripcion</label>
+          <label class="lblContacts" for="txtDescriptionContact">Descripción</label>
         </div> <!-- cierre Input descripcion -->
 
         <!-- Botón para enviar -->

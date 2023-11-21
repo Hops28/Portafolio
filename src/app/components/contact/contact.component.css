@@ -1,3 +1,5 @@
+/* @import '@sweetalert2/themes/theme-borderless\borderless.scss'; */
+
 #contactBody {
   background: linear-gradient(-45deg,
         rgba(0, 0, 0, .5) 0 10%,
@@ -155,7 +157,7 @@ textarea {
 
   font-size: large;
 
-  padding: 5px 0 5px 10px;
+  padding: 5px 10px 5px 10px;
 
 }
 
