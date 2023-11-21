@@ -32,6 +32,8 @@
         rgba(0, 0, 0, .57) 90% 100%);
 
     padding: 20px 0 100px 0;
+
+  transition: all .3s ease;
 }
 
 .separador{
@@ -99,6 +101,13 @@
   display: block;
   padding: 20px 0;
   text-align: center;
+
+  transition: all .3s ease;
+}
+
+.menu ul li.active a {
+  /* color: #EFEFFF; */
+  color: #4FC3DC;
 }
 
 .menu ul li:hover {
