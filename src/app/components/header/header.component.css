@@ -662,3 +662,21 @@ header ul li a:hover {
     font-size: medium;
   }
 }
+
+#tituloNombre {
+  margin-bottom: 20px;
+
+  font-weight: 300;
+}
+
+#tituloNombre span {
+  color: #4FC3DC;
+}
+
+.descripcion p b{
+  color: hsl(191, 67%, 60%);
+}
+
+.descripcion p i {
+  color: hsl(270, 100%, 75%);
+}

@@ -50,7 +50,9 @@
             },
             "development": {
               "buildOptimizer": false,
-              "optimization": false,
+              "optimization": {
+                "scripts": false
+              },
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
