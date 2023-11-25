@@ -13,9 +13,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+                "sweetalert2"
+            ],
             "outputPath": "dist/my-portfolio",
             "index": "src/index.html",
             "main": "src/main.ts",
+
             "polyfills": [
               "zone.js"
             ],
@@ -51,7 +55,8 @@
             "development": {
               "buildOptimizer": false,
               "optimization": {
-                "scripts": false
+                "scripts": false,
+                "styles": false
               },
               "vendorChunk": true,
               "extractLicenses": false,
