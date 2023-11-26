@@ -1,0 +1,34 @@
+#experienceBody {
+  padding: 50px 10vh;
+}
+
+.timeline {
+  width: 80vw;
+  padding: 40px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  border-radius: 35%;
+  height: 100%;
+
+  background-color: #4FC3DC;
+}
+
+/*7:55*/
+
+.timeline ul {
+  margin: 0;
+  padding: 0;
+}
+
+.timeline ul li {
+  list-style: none;
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
