@@ -19,6 +19,8 @@
     rgba(0, 0, 0, .43) 70% 80%,
     rgba(0, 0, 0, .50) 80% 90%,
     rgba(0, 0, 0, .57) 90% 100%);
+
+  transform: translateY(63px);
 }
 
 .separador:nth-child(1) {
@@ -39,7 +41,7 @@
 
   transform: translateY(-20px);
 
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .20));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .40));
 }
 
 /* .separadorInicio {
@@ -448,9 +450,9 @@ header ul li a:hover {
 .box .box_content a {
   position: relative;
   padding: 8px 15px;
-  background: #fff;
+  background: #9500e2;
   text-decoration: none;
-  color: #0C192C;
+  color: white;
   border-radius: 20px;
   font-weight: 500;
   font-size: 0.75em;

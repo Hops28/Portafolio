@@ -27,7 +27,7 @@
   background: linear-gradient(rgba(0, 0, 0, .57), rgba(0, 0, 0, 0));
 }
 
-#titulo3 {
+#titulo5 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,14 +35,14 @@
   width: 100%;
 }
 
-#titulo3 span {
+#titulo5 span {
   margin-top: 18vh;
   font-weight: 500;
   font-size: 2em;
   color: #EFEFFF;
 }
 
-#titulo3 .linea {
+#titulo5 .linea {
   height: 2px;
   width: 70px;
   background-color: #EFEFFF;

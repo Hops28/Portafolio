@@ -1,18 +1,18 @@
-#titulo2 {
+#titulo4 {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-#titulo2 span {
+#titulo4 span {
   margin-top: 80px;
   font-weight: 500;
   font-size: 2em;
   color: rgb(230, 230, 255);
 }
 
-#titulo2 .linea {
+#titulo4 .linea {
   height: 2px;
   width: 130px;
   background-color: rgb(230, 230, 255);
@@ -55,7 +55,7 @@
 
   transform: translateY(-20px);
 
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .20));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .40));
 }
 
 /* * * * * * * * * * G A L E R I A * * * * * * * * * */
