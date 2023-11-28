@@ -47,6 +47,8 @@
   font-weight: 500;
   font-size: 2em;
   color: #EFEFFF;
+
+  text-align: center;
 }
 
 #titulo2 .linea {
@@ -63,6 +65,8 @@
 
   padding: 50px 10vh;
   position: relative;
+
+  transition: all .3s ease;
 }
 
 .lineaTimeline {
@@ -92,6 +96,8 @@
   width: 50%;
   padding: 20px 40px;
   box-sizing: border-box;
+
+  transition: all .3s ease;
 }
 
 .timeline ul li:nth-child(odd)
@@ -211,4 +217,80 @@
   /* box-shadow: 0 0 3px 1px #9500e2; */
   color: white;
   border-radius: 20px;
+}
+
+@media (max-width : 730px){
+  .timeline {
+    padding: 50px 5vh;
+  }
+}
+
+@media (max-width : 670px) {
+  .timeline {
+    padding: 50px 3vh;
+  }
+}
+
+@media (max-width : 670px) {
+  .timeline ul li h3 {
+    font-size: 16px;
+  }
+
+  .timeline ul li p {
+    font-size: 14px;
+  }
+
+  .timeline ul li .time h4 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width : 550px) {
+  .timeline ul li:nth-child(odd) {
+    float: right;
+    clear: both;
+    text-align: left;
+  }
+
+  .timeline ul li:nth-child(odd)::before,
+  .timeline ul li:nth-child(even)::before {
+    content: '';
+    top: 24px;
+    left: -21px;
+    /* box-shadow: 0 0 8px 1px #9500e2; */
+  }
+
+  .timeline ul li:nth-child(odd) .time,
+  .timeline ul li:nth-child(even) .time {
+    position: static;
+
+    display: flex;
+    justify-content: flex-start;
+
+    margin-bottom: 10px;
+
+    transform: translateY(-6px);
+  }
+
+  .timeline ul li:nth-child(odd) .time h4,
+  .timeline ul li:nth-child(even) .time h4 {
+    transform: translateX(0px);
+
+    text-align: left;
+
+    border-radius: 10px;
+  }
+
+  .timeline ul li {
+    width: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+
+    padding: 20px;
+  }
+
+  .lineaTimeline {
+    left: 10%;
+    width: 3px;
+  }
 }
