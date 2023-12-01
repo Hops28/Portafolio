@@ -62,3 +62,37 @@
   width: 150px;
   background-color: #EFEFFF;
 }
+
+/********************************************************/
+
+#knowledgeContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+  gap: 15px;
+
+  padding: 20px 30px 50px 30px;
+}
+
+#knowledgeContent .conocimiento {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 20px;
+}
+
+#knowledgeContent .conocimiento img {
+  width: 100%;
+  height: auto;
+}
+
+#knowledgeContent .conocimiento h3 {
+  color: white;
+
+  margin-top: 10px;
+  text-align: center;
+}
