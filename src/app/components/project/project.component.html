@@ -9,7 +9,7 @@
   <div class="container">
     <div class="menu">
       <ul>
-        <li *ngFor="let categoria of categorias" [ngClass]="{ 'active': filtroCategoria === categoria }">
+        <li *ngFor="let categoria of categorias" [ngClass]="{ 'active': filtroCategoria === categoria }" class="opcionMenuProyectos">
           <a class="btn-menu" (click)="filtroCategoria = categoria; aplicarFiltro();">{{ categoria }}</a>
         </li>
       </ul>

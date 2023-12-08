@@ -33,3 +33,33 @@ body::-webkit-scrollbar-thumb {
   border-bottom-left-radius: 15px;
 }
 
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+    transform: translateY(50px) rotate(15deg);
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+    transform: translate(0) rotate(0deg);
+  }
+}
+
+.box_content, .descripcion, .content, .time, .conocimiento, #iconsContent, .inputContactForm, #btnEnviarCorreo {
+  view-timeline-name: --scroll;
+  animation-timeline: --scroll;
+  view-timeline-axis: block;
+  animation-name: show;
+  animation-range: entry 5% cover 20%;
+  animation-fill-mode: both;
+}
+
+#titulo1, #titulo2, #titulo3, #titulo4, #titulo5, .opcionMenuProyectos, #comentarioContactos {
+  view-timeline-name: --scroll;
+  animation-timeline: --scroll;
+  view-timeline-axis: block;
+  animation-name: show;
+  animation-range: entry 15% cover 60%;
+  animation-fill-mode: both;
+}
