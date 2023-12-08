@@ -67,11 +67,12 @@
 
 #knowledgeContent {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  /* place-content: center; */
 
-  gap: 15px;
+  gap: 30px;
 
-  padding: 20px 30px 50px 30px;
+  padding: 20px 10vh 50px 10vh;
 }
 
 #knowledgeContent .conocimiento {
@@ -81,18 +82,24 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-
-  padding: 20px;
 }
 
-#knowledgeContent .conocimiento img {
+#knowledgeContent .conocimiento a img {
   width: 100%;
   height: auto;
 }
 
-#knowledgeContent .conocimiento h3 {
+#knowledgeContent .conocimiento a h3 {
   color: white;
 
   margin-top: 10px;
   text-align: center;
+}
+
+#knowledgeContent .conocimiento a {
+  transition: all .2s ease;
+}
+
+#knowledgeContent .conocimiento a:hover {
+  transform: scale(1.1);
 }

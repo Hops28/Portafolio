@@ -151,13 +151,26 @@ header {
 
 header .logo {
   position: relative;
-  font-weight: 700;
+  font-weight: 500;
   color: #fff;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.6em;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.6s;
+
+  padding: 0.2em 0;
+}
+
+header img {
+  height: 20px;
+  width: auto;
+
+  margin-right: 15px;
+
+  transform: scale(2.1) translateY(1px);
+
+  z-index: 1;
 }
 
 header ul {

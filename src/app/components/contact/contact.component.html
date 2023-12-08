@@ -77,7 +77,7 @@
 
         <!-- Botón para enviar -->
         <div id="btnEnviarCorreo">
-          <button type="submit" id="btnEnviar" [disabled]="!miFormulario.valid">Enviar</button>
+          <button type="submit" id="btnEnviar" [disabled]="!miFormulario.valid" [attr.title]="miFormulario.invalid ? 'Tiene que llenar correctamente todos los campos' : ''">Enviar</button>
         </div>
       </form>
     </div>
