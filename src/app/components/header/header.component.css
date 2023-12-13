@@ -258,28 +258,28 @@ header ul li a:hover {
   min-height: 80vh;
 }
 
-.container .botones_inicio a {
+.container .botones_inicio #getStarted {
   position: relative;
   background: #fff;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.2em;
-  letter-spacing: 0.1em;
+  font-size: 1.05em;
+  letter-spacing: 0.05em;
   font-weight: 400;
-  padding: 10px 30px;
+  padding: 10px 20px;
   transition: 0.3s;
   border-radius: 10px;
 }
 
-.container .botones_inicio a:hover {
-  letter-spacing: 0.3em;
+.container .botones_inicio #getStarted:hover {
+  letter-spacing: 0.15em;
   color: var(--color);
   background: var(--color);
   box-shadow: 0 0 35px var(--color);
 }
 
-.container .botones_inicio a::before {
+.container .botones_inicio #getStarted::before {
   content: '';
   position: absolute;
   inset: 2px;
@@ -287,18 +287,18 @@ header ul li a:hover {
   border-radius: 10px;
 }
 
-.container .botones_inicio a span {
+.container .botones_inicio #getStarted span {
   position: relative;
   z-index: 1;
 }
 
-.container .botones_inicio a i {
+.container .botones_inicio #getStarted #getStartedI {
   position: absolute;
   inset: 0;
   display: block;
 }
 
-.container .botones_inicio a i::before {
+.container .botones_inicio #getStarted #getStartedI::before {
   content: '';
   position: absolute;
   top: 0;
@@ -310,14 +310,14 @@ header ul li a:hover {
   transition: 0.3s;
 }
 
-.container .botones_inicio a:hover i::before {
+.container .botones_inicio #getStarted:hover #getStartedI::before {
   width: 50px;
   left: 20%;
 }
 
 /**/
 
-.container .botones_inicio a i::after {
+.container .botones_inicio #getStarted #getStartedI::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -329,9 +329,61 @@ header ul li a:hover {
   transition: 0.3s;
 }
 
-.container .botones_inicio a:hover i::after {
+.container .botones_inicio #getStarted:hover #getStartedI::after {
   width: 50px;
   left: 80%;
+}
+
+#botonDescargarCV {
+  background-color: #0C192C;
+  border: solid 2px white;
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+
+  padding: 10px 15px 10px 10px;
+
+  border-radius: 5px;
+
+  overflow: hidden;
+  white-space: nowrap;
+
+  width: 50px;
+
+  display: flex;
+  align-items: center;
+
+  transition: all .5s ease;
+
+  z-index: 5;
+}
+
+#botonDescargarCV:hover {
+  padding: 10px 15px 10px 10px;
+  width: 175px;
+
+  color: var(--color);
+  border-color: var(--color);
+  box-shadow: 0 0 10px var(--color);
+}
+
+#botonDescargarCV:hover #iconDivBtnDownload i {
+  color: var(--color);
+}
+
+#botonDescargarCV #iconDivBtnDownload {
+  width: 25px;
+  height: 25px;
+
+  margin-right: 12px;
+
+  display: inline-block;
+}
+
+#botonDescargarCV #iconDivBtnDownload i {
+  color: white;
+
+  transition: all .3s ease;
 }
 
 /*************************** CONTENIDO ******************************/
@@ -525,7 +577,7 @@ header ul li a:hover {
     letter-spacing: 1px;
   }
 
-  .container .botones_inicio a {
+  .container .botones_inicio #getStarted {
     font-size: 1em;
   }
 }
@@ -636,6 +688,32 @@ header ul li a:hover {
     font-size: 0.6em;
     font-weight: 600;
     bottom: 10px;
+  }
+
+  .container .botones_inicio {
+   flex-direction: column;
+  }
+
+  #botonDescargarCV {
+    padding: 10px 15px 10px 10px;
+    margin: 20px 0 0 0;
+    width: fit-content;
+
+    border-radius: 10px;
+  }
+
+  #botonDescargarCV:hover {
+    width: fit-content;
+
+    letter-spacing: .1em;
+
+    color: var(--color);
+    border-color: var(--color);
+    box-shadow: 0 0 35px var(--color);
+  }
+
+  #botonDescargarCV:hover #iconDivBtnDownload i {
+    color: var(--color);
   }
 }
 
