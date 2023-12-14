@@ -148,6 +148,15 @@ export class ProjectComponent {
         this.urlImagenes.push(url)
       });
 
+      let tituloModal = document.getElementById("tituloProjectModal");
+      let descripcionModal = document.getElementById("descripcionProjectModal");
+
+      if (tituloModal && descripcionModal)
+      {
+        tituloModal.textContent = titulo;
+        descripcionModal.innerHTML = descripcion;
+      }
+
       // console.log(this.urlImagenes);
 
       modal.classList.add("showModal");
