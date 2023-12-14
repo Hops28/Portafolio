@@ -9,6 +9,9 @@ interface Proyecto {
   Descripcion_Corta: string,
   Categoria: string,
   Clase: string
+  UrlGithub: string,
+  UrlDeploy: string,
+  IsPrivate: boolean
 }
 
 @Component({
@@ -32,7 +35,10 @@ export class ProjectComponent {
       Descripcion_Corta: "Sistema de gestión de ventas de alimentos de una pizzería",
 
       Categoria: "Django",
-      Clase: "animate__animated animate__zoomIn"
+      Clase: "animate__animated animate__zoomIn",
+      UrlGithub: "",
+      UrlDeploy: "",
+      IsPrivate: true
     },
 
     {
@@ -44,7 +50,10 @@ export class ProjectComponent {
       Descripcion: "Descripción del proyecto 2",
       Descripcion_Corta: "Descripción corta del proyecto 2",
       Categoria: "Django",
-      Clase: "animate__animated animate__zoomIn"
+      Clase: "animate__animated animate__zoomIn",
+      UrlGithub: "",
+      UrlDeploy: "",
+      IsPrivate: false
     },
     {
       Nombre: "Proyecto3",
@@ -54,7 +63,10 @@ export class ProjectComponent {
       Descripcion: "Descripción del proyecto 3",
       Descripcion_Corta: "Descripción corta del proyecto 3",
       Categoria: "Angular",
-      Clase: "animate__animated animate__zoomIn"
+      Clase: "animate__animated animate__zoomIn",
+      UrlGithub: "",
+      UrlDeploy: "",
+      IsPrivate: true
     }
     // Agrega más proyectos aquí
   ];
@@ -136,7 +148,7 @@ export class ProjectComponent {
     }
   }
 
-  mostrarModal(imagenes : string[], titulo : string, descripcion : string): void
+  mostrarModal(imagenes : string[], titulo : string, descripcion : string, esPrivado : boolean): void
   {
     let modal = document.getElementById("modalProject");
     if (modal)
@@ -151,10 +163,24 @@ export class ProjectComponent {
       let tituloModal = document.getElementById("tituloProjectModal");
       let descripcionModal = document.getElementById("descripcionProjectModal");
 
+      let botonesURL = document.getElementById("modalBotonesProject");
+
       if (tituloModal && descripcionModal)
       {
         tituloModal.textContent = titulo;
         descripcionModal.innerHTML = descripcion;
+      }
+
+      if (botonesURL)
+      {
+        if (esPrivado)
+        {
+          botonesURL.style.display = 'none';
+        }
+        else
+        {
+          botonesURL.style.display = 'flex';
+        }
       }
 
       // console.log(this.urlImagenes);
