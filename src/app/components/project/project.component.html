@@ -19,7 +19,7 @@
 
     <div id="galeria">
       <figure class="box-img" *ngFor="let proyecto of proyectosFiltrados" [ngClass]="[proyecto.Categoria, proyecto.Clase]"
-      [style.backgroundImage]="'url(' + proyecto.Imagen[0] + ')'"
+      [style.backgroundImage]="'url(' + proyecto.ImagenPresentacion + ')'"
       [ngStyle]="{
           '--animate-duration': '0.3s'
         }"

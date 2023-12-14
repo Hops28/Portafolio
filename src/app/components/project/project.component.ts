@@ -3,6 +3,7 @@ import { Swiper } from 'swiper'
 
 interface Proyecto {
   Nombre: string,
+  ImagenPresentacion: string,
   Imagen: string[],
   Descripcion: string,
   Descripcion_Corta: string,
@@ -19,18 +20,24 @@ export class ProjectComponent {
 
   Proyectos: Proyecto[] = [
     {
-      Nombre: "Proyecto1",
-      Imagen: ["../../../assets/Portada2.jpg",
-                      "../../../assets/Portada2.jpg",
-                      "../../../assets/Portada2.jpg",
-                      "../../../assets/Portada2.jpg",],
-      Descripcion: "Descripción del proyecto 1",
-      Descripcion_Corta: "Descripción corta del proyecto 1",
+      Nombre: "Web50: Project 3",
+      ImagenPresentacion: "../../../assets/Proyectos/Django/proyecto1/01.png",
+      Imagen: ["../../../assets/Proyectos/Django/proyecto1/01.png",
+                      "../../../assets/Proyectos/Django/proyecto1/02.png",
+                      "../../../assets/Proyectos/Django/proyecto1/03.png",
+                      "../../../assets/Proyectos/Django/proyecto1/04.png"],
+
+      Descripcion: "Sistema de gestión de ventas de alimentos de una pizzería <br/> Se mostrará la página de pedidos, donde aparecen: Pizza, Ensaladas, Bebidas, Subs, Pastas, Comida completa. <br/> Cada una con opciones diferentes donde se puede elegir lo que se desea comprar (Sólo uno). En la sección de pizza, además de seleccionar el tamaño y tipo de pizza, se podrán pedir los 'extras' o 'toppings' que irán incluidos en la orden. <br/>En cada sección hay un botón de 'añadir al carrito' donde se podrán añadir al carrito los platillos que quiera... <br/>Luego en la sección de 'carrito' se podrán ver todos los productos que se añadieron al carrito, siempre y cuando éste se encuentre en estado 'pendiente' (su campo en las tablas se llama solicitud) Donde dentro, habrán tres opciones 'Guardar como pendiente', 'Confirmar compra', 'Cancelar orden'. <br/>Guardar como pendiente: No sucederá nada más que regresarme a la sección de pedidos Confirmar compra: Se cambia el estado de la factura de 'pendiente' a 'listo' y la cantidad de productos se actualiza Cancelar orden: Se guarda la factura pero en un estado a 'cancelado' y la cantidad de productos se mantiene",
+
+      Descripcion_Corta: "Sistema de gestión de ventas de alimentos de una pizzería",
+
       Categoria: "Django",
       Clase: "animate__animated animate__zoomIn"
     },
+
     {
       Nombre: "Proyecto2",
+      ImagenPresentacion: "../../../assets/Portada3.jpg",
       Imagen: ["../../../assets/Portada3.jpg",
                       "../../../assets/Portada3.jpg",
                       "../../../assets/Portada3.jpg"],
@@ -41,25 +48,18 @@ export class ProjectComponent {
     },
     {
       Nombre: "Proyecto3",
+      ImagenPresentacion: "../../../assets/Portada4.jpg",
       Imagen: ["../../../assets/Portada4.jpg",
                       "../../../assets/Portada4.jpg"],
       Descripcion: "Descripción del proyecto 3",
       Descripcion_Corta: "Descripción corta del proyecto 3",
       Categoria: "Angular",
       Clase: "animate__animated animate__zoomIn"
-    },
-    {
-      Nombre: "Proyecto4",
-      Imagen: ["../../../assets/Portada5.png"],
-      Descripcion: "Descripción del proyecto 4",
-      Descripcion_Corta: "Descripción corta del proyecto 4",
-      Categoria: "Flask",
-      Clase: "animate__animated animate__zoomIn"
     }
     // Agrega más proyectos aquí
   ];
 
-  categorias: string[] = ['Todos', 'Django', 'Flask', 'Angular'];
+  categorias: string[] = ['Todos', 'Django', 'Angular'];
   filtroCategoria: string = 'Todos';
   proyectosFiltrados: Proyecto[] = [];
   urlImagenes : string[] = [];
