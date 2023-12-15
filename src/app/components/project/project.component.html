@@ -24,7 +24,7 @@
           '--animate-duration': '0.3s'
         }"
         (mouseenter) = "hoverCaja(1, proyecto.Nombre)"
-        (click) = "mostrarModal(proyecto.Imagen, proyecto.Nombre, proyecto.Descripcion, proyecto.IsPrivate)">
+        (click) = "mostrarModal(proyecto)">
 
         <!-- CONTENIDO -->
         <div class="contenido-box-img">
@@ -86,8 +86,8 @@
 
         <!-- boton de github esquina inferior derecha animacion que flota -->
         <div id="modalBotonesProject">
-          <a href="" id="btnGithub" title="Ver proyecto en Github"><i class='bx bxl-github bx-md'></i></a>
-          <a href="" id="btnWorld" title="Ver proyecto"><i class='bx bx-world bx-md'></i></a>
+          <a href="" id="btnGithub" title="Ver proyecto en Github" target="_blank"><i class='bx bxl-github bx-md'></i></a>
+          <a href="" id="btnWorld" title="Ver proyecto" target="_blank"><i class='bx bx-world bx-md'></i></a>
         </div>
       </div>
     </div>

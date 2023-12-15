@@ -531,3 +531,8 @@ swiper-container::part(button-prev) {
   top: 50%;
   transform: translateY(-50%);
 }
+
+.listaDescripcionModal {
+  margin: 10px 10%;
+  text-align: left;
+}
