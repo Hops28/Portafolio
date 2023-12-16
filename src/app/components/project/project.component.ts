@@ -209,14 +209,17 @@ export class ProjectComponent {
       if (botonesURL)
       {
         // Si el proyecto está privado en Github entonces se ocultan los botones de las url
+
+        // Se obtiene el elemento botón con la url de github
+        let deployURL = document.getElementById("btnWorld");
+        let githubURL = document.getElementById("btnGithub");
+
         if (proyecto.IsPrivate)
         {
+
           if (proyecto.UrlDeploy != "")
           {
             botonesURL.style.display = 'flex';
-            // Se obtiene el elemento botón con la url de github
-            let deployURL = document.getElementById("btnWorld");
-            let githubURL = document.getElementById("btnGithub");
 
             // Se verifica ese elemento
             if (deployURL)
@@ -242,14 +245,17 @@ export class ProjectComponent {
           // Se verifica si realmente hay
           if (proyecto.UrlGithub != "")
           {
-            // Se obtiene el elemento botón con la url de github
-            let githubURL = document.getElementById("btnGithub");
-
             // Se verifica ese elemento
             if (githubURL)
             {
               // Como ya verificamos que SI hay url entonces la establecemos al botón de github
               githubURL.setAttribute("href", proyecto.UrlGithub);
+            }
+          }
+          else {
+            if (githubURL)
+            {
+              githubURL.style.display = 'none';
             }
           }
 
@@ -263,6 +269,12 @@ export class ProjectComponent {
             {
               // Como ya verificamos que SI hay url entonces la establecemos al botón de github
               deployURL.setAttribute("href", proyecto.UrlDeploy);
+            }
+          }
+          else {
+            if (deployURL)
+            {
+              deployURL.style.display = 'none';
             }
           }
         }
