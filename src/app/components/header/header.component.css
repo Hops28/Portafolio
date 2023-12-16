@@ -20,7 +20,9 @@
     rgba(0, 0, 0, .50) 80% 90%,
     rgba(0, 0, 0, .57) 90% 100%);
 
-  transform: translateY(63px);
+  transform: translateY(11vh);
+
+  z-index: -5;
 }
 
 .separador:nth-child(1) {

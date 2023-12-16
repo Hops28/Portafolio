@@ -82,6 +82,8 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+
+  text-overflow: ellipsis;
 }
 
 #knowledgeContent .conocimiento a img {
@@ -98,8 +100,33 @@
 
 #knowledgeContent .conocimiento a {
   transition: all .2s ease;
+
+  width: 100%;
 }
 
 #knowledgeContent .conocimiento a:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 670px)
+{
+  #knowledgeContent {
+      grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+
+        padding: 20px 2vh 50px 2vh;
+    }
+
+  #knowledgeContent .conocimiento a h3 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 410px) {
+  #knowledgeContent {
+    grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+  }
+
+  #knowledgeContent .conocimiento a h3 {
+    font-size: 0.9em;
+  }
 }
