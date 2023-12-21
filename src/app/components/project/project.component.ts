@@ -68,7 +68,7 @@ export class ProjectComponent {
       Categoria: "Angular",
       Clase: "animate__animated animate__zoomIn",
       UrlGithub: "https://github.com/Hops28/Trivia",
-      UrlDeploy: "",
+      UrlDeploy: "https://triviahops.web.app/",
       IsPrivate: false
     },
     {
